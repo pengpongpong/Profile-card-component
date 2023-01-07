@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap')
+    
+$dark_cyan: hsl(185, 75%, 39%)
+$dark_blue: hsl(229, 23%, 23%)
+$gray_blue: hsl(227, 10%, 46%)
+$white: hsl(0, 0%, 100%)
+
+$kumbh: 'Kumbh Sans', sans-serif
+
+$mobile: 400px
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    display: grid
+    place-items: center
+    height: 100vh
+    background: $dark_cyan
+    font-family: $kumbh
+    z-index: 0
+    position: relative
+    #top
+        position: absolute
+        top: -50%
+        left: -2%
+        @media screen and ( max-width: $mobile )
+            translate: -80% -20%
+    #bottom
+        position: absolute
+        bottom: -30%
+        right: -2%
+        @media screen and ( max-width: $mobile )
+            translate: 75% 20%
+        
+
+main
+    background-color: $white
+    border-radius: 20px
+    overflow: hidden
+    width: 28rem
+    z-index: 1
+    @media screen and ( max-width: $mobile )
+        width: 90%
+    
+    .profile
+        position: relative
+    #bg_img
+        width: 100%
+    #person_img
+        position: absolute
+        translate: -50% -50%
+        top: 11rem
+        left: 14rem
+        border-radius: 50%
+        border: 5px solid $white
+        transform: scale(1.2)
+        background-color: $white
+        @media screen and ( max-width: $mobile )
+            transform: scale(1)
+            top: 33%
+    .person
+        text-align: center
+        padding-top: 5rem
+        .age, .city
+            color: $gray_blue
+        .city
+            font-weight: 100
+            font-size: 1.3rem
+            padding-top: .5rem
+            padding-bottom: 2rem
+        .age
+            font-weight: 500
+            font-size: 1.5rem
+            padding-left: .4rem
+        .name
+            font-weight: 800
+            font-size: 1.5rem
+        @media screen and ( max-width: $mobile )
+            .city
+                font-size: 1rem
+            .name, .age
+                font-size: 1.2rem
+    .stats
+        border-top: 1px solid  lighten($gray_blue, 40%)
+        display: flex
+        flex-direction: row
+        justify-content: space-evenly
+        padding: 2rem 0
+        div
+            display: grid
+            place-items: center
+        p
+            color: $gray_blue
+            letter-spacing: 2px
+            font-size: .6rem
+.attribution 
+    font-size: 11px
+    text-align: center
+    a 
+        color: $dark_blue
+      

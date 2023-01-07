@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: hsl(185deg, 75%, 39%);
+  font-family: "Kumbh Sans", sans-serif;
+  z-index: 0;
+  position: relative;
+}
+body #top {
+  position: absolute;
+  top: -50%;
+  left: -2%;
+}
+@media screen and (max-width: 400px) {
+  body #top {
+    translate: -80% -20%;
+  }
+}
+body #bottom {
+  position: absolute;
+  bottom: -30%;
+  right: -2%;
+}
+@media screen and (max-width: 400px) {
+  body #bottom {
+    translate: 75% 20%;
+  }
+}
+
+main {
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 28rem;
+  z-index: 1;
+}
+@media screen and (max-width: 400px) {
+  main {
+    width: 90%;
+  }
+}
+main .profile {
+  position: relative;
+}
+main #bg_img {
+  width: 100%;
+}
+main #person_img {
+  position: absolute;
+  translate: -50% -50%;
+  top: 38%;
+  left: 50%;
+  border-radius: 50%;
+  border: 5px solid hsl(0deg, 0%, 100%);
+  transform: scale(1.2);
+  background-color: hsl(0deg, 0%, 100%);
+}
+@media screen and (max-width: 400px) {
+  main #person_img {
+    transform: scale(1);
+    top: 33%;
+  }
+}
+main .person {
+  text-align: center;
+  padding-top: 5rem;
+}
+main .person .age, main .person .city {
+  color: hsl(227deg, 10%, 46%);
+}
+main .person .city {
+  font-weight: 100;
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+main .person .age {
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding-left: 0.4rem;
+}
+main .person .name {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 400px) {
+  main .person .city {
+    font-size: 1rem;
+  }
+  main .person .name, main .person .age {
+    font-size: 1.2rem;
+  }
+}
+main .stats {
+  border-top: 1px solid #d8d9df;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 2rem 0;
+}
+main .stats div {
+  display: grid;
+  place-items: center;
+}
+main .stats p {
+  color: hsl(227deg, 10%, 46%);
+  letter-spacing: 2px;
+  font-size: 0.6rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(229deg, 23%, 23%);
+}/*# sourceMappingURL=index.css.map */
