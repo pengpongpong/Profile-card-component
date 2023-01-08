@@ -18,23 +18,11 @@ body
     display: grid
     place-items: center
     height: 100vh
-    background: $dark_cyan
     font-family: $kumbh
     z-index: 0
-    position: relative
-    #top
-        position: absolute
-        top: -50%
-        left: -2%
-        @media screen and ( max-width: $mobile )
-            translate: -80% -20%
-    #bottom
-        position: absolute
-        bottom: -30%
-        right: -2%
-        @media screen and ( max-width: $mobile )
-            translate: 75% 20%
-        
+    background: url("images/bg-pattern-top.svg") no-repeat, url("images/bg-pattern-bottom.svg") no-repeat
+    background-position: left -5rem top -30rem, right 0 bottom -20rem
+    background-color: $dark_cyan
 
 main
     background-color: $white
@@ -51,9 +39,8 @@ main
         width: 100%
     #person_img
         position: absolute
-        translate: -50% -50%
-        top: 11rem
-        left: 14rem
+        top: 8rem
+        left: 11rem
         border-radius: 50%
         border: 5px solid $white
         transform: scale(1.2)

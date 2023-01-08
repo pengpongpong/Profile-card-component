@@ -9,30 +9,11 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
-  background: hsl(185deg, 75%, 39%);
   font-family: "Kumbh Sans", sans-serif;
   z-index: 0;
-  position: relative;
-}
-body #top {
-  position: absolute;
-  top: -50%;
-  left: -2%;
-}
-@media screen and (max-width: 400px) {
-  body #top {
-    translate: -80% -20%;
-  }
-}
-body #bottom {
-  position: absolute;
-  bottom: -30%;
-  right: -2%;
-}
-@media screen and (max-width: 400px) {
-  body #bottom {
-    translate: 75% 20%;
-  }
+  background: url("images/bg-pattern-top.svg") no-repeat, url("images/bg-pattern-bottom.svg") no-repeat;
+  background-position: left -5rem top -30rem, right 0 bottom -20rem;
+  background-color: hsl(185deg, 75%, 39%);
 }
 
 main {
@@ -55,9 +36,8 @@ main #bg_img {
 }
 main #person_img {
   position: absolute;
-  translate: -50% -50%;
-  top: 38%;
-  left: 50%;
+  top: 8rem;
+  left: 11rem;
   border-radius: 50%;
   border: 5px solid hsl(0deg, 0%, 100%);
   transform: scale(1.2);
